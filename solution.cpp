@@ -60,8 +60,8 @@ int Solution::findWays(int n)
     {
       if (j == i - j - 2)
         /*no symmetry if you divide people into two groups
-          both have the same number of people as you only
-          have one way to do it
+          of the same number of people, you only have one way
+          to do it
         */
         dp[i] += dp[j] * dp[i - j - 2] % mod;
       else
